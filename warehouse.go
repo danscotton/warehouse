@@ -1,4 +1,4 @@
-package main
+package warehouse
 
 import (
 	"fmt"
@@ -58,7 +58,7 @@ func NewWarehouse() Warehouse {
 	}
 }
 
-func NewRecord(title, artist string) Item {
+func NewRecord(title, artist string) Record {
 	return Record{
 		Title: title,
 		Artist: Artist{

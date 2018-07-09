@@ -1,4 +1,4 @@
-package main
+package warehouse
 
 import (
 	"testing"
@@ -10,7 +10,7 @@ func TestNewWarehousesHaveNoStock(t *testing.T) {
 	g := gm.NewGomegaWithT(t)
 	w := NewWarehouse()
 
-	g.Expect(w.GetStock()).To(gm.HaveLen(0))
+	g.Expect(w.GetStock()).To(gm.BeEmpty())
 }
 
 func TestTwoItemsThatAreTheSameCreateOneEntry(t *testing.T) {
